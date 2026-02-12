@@ -17,7 +17,10 @@ import markdoc from '@astrojs/markdoc'
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ['astro-leaflet > leaflet'],
+    }
   },
   site: 'https://hellotham.github.io',
   base: '/hello-astro/',
